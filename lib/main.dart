@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learnapp/network/dio/screens/dio_screen.dart';
 import 'package:learnapp/network/http/screens/http_screen.dart';
+import 'package:learnapp/statemanagement/blocs/bloc/api/methods/bloc.dart';
+import 'package:learnapp/statemanagement/blocs/bloc/api/screens/apibloc_screen.dart';
 import 'package:learnapp/statemanagement/blocs/bloc/counter/methods/counter_bloc.dart';
 import 'package:learnapp/statemanagement/blocs/bloc/counter/screens/counterbloc_screen.dart';
 import 'package:learnapp/statemanagement/blocs/cubit/api/methods/api_cubit.dart';
@@ -28,6 +30,7 @@ class HomeApp extends StatelessWidget {
         BlocProvider(create: (context) => CounterCubit()),
         BlocProvider(create: (context) => ApiCubit()),
         BlocProvider(create: (context) => CounterBloc()),
+        BlocProvider(create: (context) => ApiBloc()),
       ],
       child: MultiProvider(
         providers: [
@@ -41,7 +44,8 @@ class HomeApp extends StatelessWidget {
           // home: ApiProviderScreen(),
           // home: CounterCubitScreen(),
           // home: ApiCubitScreen(),
-          home: CounterBlocScreen(),
+          // home: CounterBlocScreen(),
+          home: ApiBlocScreen(),
           debugShowCheckedModeBanner: false,
         ),
       ),
