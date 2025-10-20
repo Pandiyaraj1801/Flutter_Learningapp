@@ -10,6 +10,8 @@ import 'package:learnapp/statemanagement/blocs/cubit/api/methods/api_cubit.dart'
 import 'package:learnapp/statemanagement/blocs/cubit/api/screens/apicubit_screen.dart';
 import 'package:learnapp/statemanagement/blocs/cubit/counter/methods/counter_cubit.dart';
 import 'package:learnapp/statemanagement/blocs/cubit/counter/screens/counter_screen.dart';
+import 'package:learnapp/statemanagement/getx/api/screens.dart';
+import 'package:learnapp/statemanagement/getx/counter/screen.dart';
 import 'package:learnapp/statemanagement/providers/methods/api_provider.dart';
 import 'package:learnapp/statemanagement/providers/methods/counter_provider.dart';
 import 'package:learnapp/statemanagement/providers/screens/api_screen.dart';
@@ -45,7 +47,9 @@ class HomeApp extends StatelessWidget {
           // home: CounterCubitScreen(),
           // home: ApiCubitScreen(),
           // home: CounterBlocScreen(),
-          home: ApiBlocScreen(),
+          // home: ApiBlocScreen(),
+          // home: CounterGetxScreen(),
+          home: ApiGetxScreen(),
           debugShowCheckedModeBanner: false,
         ),
       ),
