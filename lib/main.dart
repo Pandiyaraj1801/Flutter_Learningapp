@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learnapp/network/dio/screens/dio_screen.dart';
 import 'package:learnapp/network/http/screens/http_screen.dart';
+import 'package:learnapp/singletonclass/screen.dart';
 import 'package:learnapp/statemanagement/blocs/bloc/api/methods/bloc.dart';
 import 'package:learnapp/statemanagement/blocs/bloc/api/screens/apibloc_screen.dart';
 import 'package:learnapp/statemanagement/blocs/bloc/counter/methods/counter_bloc.dart';
@@ -49,7 +50,8 @@ class HomeApp extends StatelessWidget {
           // home: CounterBlocScreen(),
           // home: ApiBlocScreen(),
           // home: CounterGetxScreen(),
-          home: ApiGetxScreen(),
+          // home: ApiGetxScreen(),
+          home: SingleTonScreen(),
           debugShowCheckedModeBanner: false,
         ),
       ),
