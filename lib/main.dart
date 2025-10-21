@@ -5,6 +5,7 @@ import 'package:learnapp/network/http/screens/http_screen.dart';
 import 'package:learnapp/sharedpreferences/methods.dart';
 import 'package:learnapp/sharedpreferences/screens.dart';
 import 'package:learnapp/singletonclass/screen.dart';
+import 'package:learnapp/sockets/websocket/screens.dart';
 import 'package:learnapp/statemanagement/blocs/bloc/api/methods/bloc.dart';
 import 'package:learnapp/statemanagement/blocs/bloc/api/screens/apibloc_screen.dart';
 import 'package:learnapp/statemanagement/blocs/bloc/counter/methods/counter_bloc.dart';
@@ -55,7 +56,8 @@ class HomeApp extends StatelessWidget {
           // home: CounterGetxScreen(),
           // home: ApiGetxScreen(),
           // home: SingleTonScreen(),
-          home: SharedPrefScreen(),
+          // home: SharedPrefScreen(),
+          home: WebSocketScreen(),
           debugShowCheckedModeBanner: false,
         ),
       ),
