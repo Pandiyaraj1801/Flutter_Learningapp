@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learnapp/network/dio/screens/dio_screen.dart';
 import 'package:learnapp/network/http/screens/http_screen.dart';
+import 'package:learnapp/sharedpreferences/methods.dart';
+import 'package:learnapp/sharedpreferences/screens.dart';
 import 'package:learnapp/singletonclass/screen.dart';
 import 'package:learnapp/statemanagement/blocs/bloc/api/methods/bloc.dart';
 import 'package:learnapp/statemanagement/blocs/bloc/api/screens/apibloc_screen.dart';
@@ -19,7 +21,8 @@ import 'package:learnapp/statemanagement/providers/screens/api_screen.dart';
 import 'package:learnapp/statemanagement/providers/screens/counter_screen.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  await SharedPref.getInstance.initSharedPref();
   runApp(HomeApp());
 }
 
@@ -51,7 +54,8 @@ class HomeApp extends StatelessWidget {
           // home: ApiBlocScreen(),
           // home: CounterGetxScreen(),
           // home: ApiGetxScreen(),
-          home: SingleTonScreen(),
+          // home: SingleTonScreen(),
+          home: SharedPrefScreen(),
           debugShowCheckedModeBanner: false,
         ),
       ),
