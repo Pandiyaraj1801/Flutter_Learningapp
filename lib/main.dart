@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learnapp/design_patterns/mvc/counter/cubit/model/cubit_model.dart';
+import 'package:learnapp/design_patterns/mvc/counter/cubit/view/cubit_view.dart';
+import 'package:learnapp/design_patterns/mvc/counter/provider/model/provider_model.dart';
+import 'package:learnapp/design_patterns/mvc/counter/provider/view/provider_view.dart';
+import 'package:learnapp/design_patterns/mvc/counter/setstate/view/counter_setstate.dart';
 import 'package:learnapp/network/dio/screens/dio_screen.dart';
 import 'package:learnapp/network/http/screens/http_screen.dart';
 import 'package:learnapp/sharedpreferences/methods.dart';
@@ -38,11 +43,13 @@ class HomeApp extends StatelessWidget {
         BlocProvider(create: (context) => ApiCubit()),
         BlocProvider(create: (context) => CounterBloc()),
         BlocProvider(create: (context) => ApiBloc()),
+        BlocProvider(create: (context) => CounterCubitModel()),
       ],
       child: MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (context) => CounterProvider()),
           ChangeNotifierProvider(create: (context) => ApiProvider()),
+          ChangeNotifierProvider(create: (context) => ProviderCounterModel(0)),
         ],
         child: MaterialApp(
           // home: HttpScreen(),
@@ -57,7 +64,10 @@ class HomeApp extends StatelessWidget {
           // home: ApiGetxScreen(),
           // home: SingleTonScreen(),
           // home: SharedPrefScreen(),
-          home: WebSocketScreen(),
+          // home: WebSocketScreen(),
+          // home: CounterSetStateScreen(),
+          // home: MvcProviderCounterScreen(),
+          home: CounterCubitView(),
           debugShowCheckedModeBanner: false,
         ),
       ),
