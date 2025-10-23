@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learnapp/design_patterns/mvc/counter/cubit/model/cubit_model.dart';
 import 'package:learnapp/design_patterns/mvc/counter/cubit/view/cubit_view.dart';
+import 'package:learnapp/design_patterns/mvc/counter/getx/view/get_view.dart';
 import 'package:learnapp/design_patterns/mvc/counter/provider/model/provider_model.dart';
 import 'package:learnapp/design_patterns/mvc/counter/provider/view/provider_view.dart';
 import 'package:learnapp/design_patterns/mvc/counter/setstate/view/counter_setstate.dart';
@@ -67,7 +68,8 @@ class HomeApp extends StatelessWidget {
           // home: WebSocketScreen(),
           // home: CounterSetStateScreen(),
           // home: MvcProviderCounterScreen(),
-          home: CounterCubitView(),
+          // home: CounterCubitView(),
+          home: GetCounterView(),
           debugShowCheckedModeBanner: false,
         ),
       ),
