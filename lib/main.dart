@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learnapp/design_patterns/clean_architecture/api/features/data/datasource/api_datasource.dart';
+import 'package:learnapp/design_patterns/clean_architecture/api/features/data/repo_impl/api_repo_impl.dart';
+import 'package:learnapp/design_patterns/clean_architecture/api/features/domain/usecase/api_usecase.dart';
+import 'package:learnapp/design_patterns/clean_architecture/api/features/presentation/bloc/bloc.dart';
+import 'package:learnapp/design_patterns/clean_architecture/api/features/presentation/bloc/event.dart';
+import 'package:learnapp/design_patterns/clean_architecture/api/features/presentation/screens/api_screen.dart';
 import 'package:learnapp/design_patterns/mvc/api/cubit/model/mvccubit_model.dart';
 import 'package:learnapp/design_patterns/mvc/api/cubit/model/mvccubit_model.dart';
 import 'package:learnapp/design_patterns/mvc/api/cubit/view/mvccubit_view.dart';
@@ -53,6 +59,13 @@ class HomeApp extends StatelessWidget {
         BlocProvider(create: (context) => ApiBloc()),
         BlocProvider(create: (context) => CounterCubitModel()),
         BlocProvider(create: (context) => MvcApiCubitModel()),
+        BlocProvider(
+          create: (context) => ApiCleanArchBloc(
+            ApiCleanArchUseCase(
+              ApiCleanArchRepoImpl(ApiCleanArchDataSourceImpl()),
+            ),
+          )..add(ApiCleanArchInitialEvent()),
+        ),
       ],
       child: MultiProvider(
         providers: [
@@ -82,7 +95,8 @@ class HomeApp extends StatelessWidget {
           // home: MvcApiSetStateView(),
           // home: MvcApiProviderScreen(),
           // home: GetxApiView(),
-          home: MvcApiCubitView(),
+          // home: MvcApiCubitView(),
+          home: ApiCleanArchScreen(),
           debugShowCheckedModeBanner: false,
         ),
       ),
