@@ -19,6 +19,13 @@ import 'package:learnapp/design_patterns/mvc/counter/getx/view/get_view.dart';
 import 'package:learnapp/design_patterns/mvc/counter/provider/model/provider_model.dart';
 import 'package:learnapp/design_patterns/mvc/counter/provider/view/provider_view.dart';
 import 'package:learnapp/design_patterns/mvc/counter/setstate/view/counter_setstate.dart';
+import 'package:learnapp/design_patterns/mvvm/api/cubit/mvvm_apicubit_view.dart';
+import 'package:learnapp/design_patterns/mvvm/api/cubit/mvvm_apicubit_vm.dart';
+import 'package:learnapp/design_patterns/mvvm/api/getx/mvvm_apigetx_view.dart';
+import 'package:learnapp/design_patterns/mvvm/api/provider/mvvm_apiprovider_model.dart';
+import 'package:learnapp/design_patterns/mvvm/api/provider/mvvm_apiprovider_view.dart';
+import 'package:learnapp/design_patterns/mvvm/api/provider/mvvm_apiprovider_vm.dart';
+import 'package:learnapp/design_patterns/mvvm/api/setstate/mvvm_api_view.dart';
 import 'package:learnapp/design_patterns/mvvm/counter/cubit/mvvm_countercubit_view.dart';
 import 'package:learnapp/design_patterns/mvvm/counter/cubit/mvvm_countercubit_vm.dart';
 import 'package:learnapp/design_patterns/mvvm/counter/getx/mvvm_countergetx_view.dart';
@@ -74,6 +81,7 @@ class HomeApp extends StatelessWidget {
           )..add(ApiCleanArchInitialEvent()),
         ),
         BlocProvider(create: (context) => MvvmCounterCubitVm()),
+        BlocProvider(create: (context) => MvvmApicubitVm()),
       ],
       child: MultiProvider(
         providers: [
@@ -84,6 +92,9 @@ class HomeApp extends StatelessWidget {
           ChangeNotifierProvider(
             create: (context) =>
                 MvvmCounterProviderVm(MvvmCounterProviderModel(0)),
+          ),
+          ChangeNotifierProvider(
+            create: (context) => MvvmApiProviderVm(MvvmApiProviderModel()),
           ),
         ],
         child: MaterialApp(
@@ -112,7 +123,11 @@ class HomeApp extends StatelessWidget {
           // home: MvvmCounterView(),
           // home: MvvmCounterProviderView(),
           // home: MvvmCounterGetxView(),
-          home: MvvmCounterCubitView(),
+          // home: MvvmCounterCubitView(),
+          // home: MvvmApiView(),
+          // home: MvvmApiProviderView(),
+          // home: MvvmApiGetxView(),
+          home: MvvmApiCubitView(),
           debugShowCheckedModeBanner: false,
         ),
       ),
