@@ -42,12 +42,12 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyCWNDCkmy7-mnIT2KmSf68xzYJ5_bg3HxY',
-    appId: '1:362233249667:web:2e0d61c4885face45200b6',
+    appId: '1:362233249667:web:13460ec6a70b21595200b6',
     messagingSenderId: '362233249667',
     projectId: 'loginsignup-3cca8',
     authDomain: 'loginsignup-3cca8.firebaseapp.com',
     storageBucket: 'loginsignup-3cca8.firebasestorage.app',
-    measurementId: 'G-TWXT8Z2QE8',
+    measurementId: 'G-XDQJHSLDJW',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'loginsignup-3cca8.firebasestorage.app',
     measurementId: 'G-XDQJHSLDJW',
   );
+
 }

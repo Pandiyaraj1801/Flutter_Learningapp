@@ -35,6 +35,8 @@ import 'package:learnapp/design_patterns/mvvm/counter/provider/mvvm_counterprovi
 import 'package:learnapp/design_patterns/mvvm/counter/provider/mvvm_counterprovider_view.dart';
 import 'package:learnapp/design_patterns/mvvm/counter/provider/mvvm_counterprovider_vm.dart';
 import 'package:learnapp/design_patterns/mvvm/counter/setstate/mvvm_counter_view.dart';
+import 'package:learnapp/firebase/authentication/screens/login_screen.dart';
+import 'package:learnapp/firebase/authentication/services/authentication_methods.dart';
 import 'package:learnapp/firebase/push_notification/services/local_notification.dart';
 import 'package:learnapp/firebase/push_notification/services/notification_method.dart';
 import 'package:learnapp/firebase/push_notification/views/notification_screen.dart';
@@ -145,7 +147,8 @@ class HomeApp extends StatelessWidget {
           // home: MvvmApiProviderView(),
           // home: MvvmApiGetxView(),
           // home: MvvmApiCubitView(),
-          home: NotificationScreen(),
+          // home: NotificationScreen(),
+          home: LoginAuthFBScreen(),
           debugShowCheckedModeBanner: false,
         ),
       ),

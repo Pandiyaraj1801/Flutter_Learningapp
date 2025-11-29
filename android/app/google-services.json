@@ -7,63 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:362233249667:android:ab1688503e0d68b45200b6",
-        "android_client_info": {
-          "package_name": "com.example.msgapp"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCB8vCSMUHq9sqpSC9LABAXK-BfXWVBXiQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:362233249667:android:e36117af26a896e15200b6",
-        "android_client_info": {
-          "package_name": "com.example.patternapp"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCB8vCSMUHq9sqpSC9LABAXK-BfXWVBXiQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:362233249667:android:823e9a26561c09515200b6",
-        "android_client_info": {
-          "package_name": "com.firebase.firebaseapp.firebaseapp"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCB8vCSMUHq9sqpSC9LABAXK-BfXWVBXiQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:362233249667:android:6ad724994255e44c5200b6",
         "android_client_info": {
           "package_name": "com.learning.learnapp.learnapp"

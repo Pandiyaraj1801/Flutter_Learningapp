@@ -12,7 +12,7 @@ class MsgServices {
   static MsgServices get getMsgInstance => _msgInstance;
 
   /// Create the firebase instance
-  static FirebaseMessaging instance = FirebaseMessaging.instance;
+  FirebaseMessaging instance = FirebaseMessaging.instance;
 
   /// Initiate the FCM token
   Future<void> initFcm() async {
@@ -21,7 +21,7 @@ class MsgServices {
 
     /// Get the FCM token
     String? token = await instance.getToken();
-    print("Token: $token");
+    print("FCM Token: $token");
 
     FirebaseMessaging.onMessage.listen((RemoteMessage msg) {
       LocalNotificationService.display(msg);

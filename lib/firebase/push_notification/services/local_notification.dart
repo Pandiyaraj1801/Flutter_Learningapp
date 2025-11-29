@@ -32,7 +32,7 @@ class LocalNotificationService {
         notificationDetails,
       );
     } catch (e) {
-      print(e);
+      print("Error Occur in LocalNotification message: $e");
     }
   }
 }
