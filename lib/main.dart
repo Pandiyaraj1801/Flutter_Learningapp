@@ -9,7 +9,6 @@ import 'package:learnapp/design_patterns/clean_architecture/api/features/present
 import 'package:learnapp/design_patterns/clean_architecture/api/features/presentation/bloc/event.dart';
 import 'package:learnapp/design_patterns/clean_architecture/api/features/presentation/screens/api_screen.dart';
 import 'package:learnapp/design_patterns/mvc/api/cubit/model/mvccubit_model.dart';
-import 'package:learnapp/design_patterns/mvc/api/cubit/model/mvccubit_model.dart';
 import 'package:learnapp/design_patterns/mvc/api/cubit/view/mvccubit_view.dart';
 import 'package:learnapp/design_patterns/mvc/api/getx/view/getapi_view.dart';
 import 'package:learnapp/design_patterns/mvc/api/provider/model/providerapi_model.dart';
